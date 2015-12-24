@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html ng-app="resumeApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Matthew Coupal</title>
+  <link rel="stylesheet" href="css/master.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+
+  <span id="wrapper">
+    <header>
+      <div class="content">
+        <h1 class="text-center">Matthew Coupal
+        </h1>
+        <h1 class="text-center">
+          <small>How Can I Contribute?</small>
+        </h1>
+        <hr>
+        <div class="row pad">
+          <div id="profile" class="col-sm-12 col-lg-3">
+            <img src="images/LinkedIn_Profile.jpg" alt="Profile Picture" class="img-circle profile-pic" />
+          </div>
+          <div class="col-sm-12 col-lg-7">
+            <div class="vertical-align">
+              <blockquote>
+                <h2>
+                  “Challenges are what make life interesting and overcoming them is what makes life meaningful.”
+                  <small> Joshua J. Marine</small>
+                </h2>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-lg-4 text-center">
+            <div class="panel panel-default">
+              <h2>
+                <span class="glyphicon glyphicon-home"></span>
+                <br> Home</h2>
+              <hr>
+              <div class="panel-body">
+                <p>
+                  <strong>School:</strong> 804 Barrington Drive, Potsdam NY 13676
+                </p>
+                <p>
+                  <strong>Primary: </strong> 504 Perry Mills Rd, Champlain NY 12919
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-4 text-center">
+            <div class="panel panel-default">
+              <h2>
+                <span class="glyphicon glyphicon-envelope"></span>
+                <br> Email
+              </h2>
+              <hr>
+              <div class="panel-body">
+                <p>
+                  <strong>School: </strong> <a href="mailto:coupalme198@potsdam.edu">coupalme198@potsdam.edu</a>
+                </p>
+                <p>
+                  <strong>Primary: </strong> <a href="mailto:coupal.matthew@gmail.com">coupal.matthew@gmail.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class=" col-xs-12 col-md-12 col-lg-4 text-center">
+            <div class="panel panel-default">
+              <h2>
+                <span class="glyphicon glyphicon-user"></span>
+                <br> Connect</h2>
+              <hr>
+              <div class="panel-body">
+                <p>
+                  <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/coupalme">https://www.linkedin.com/in/coupalme</a>
+                </p>
+                <p>
+                  <strong>Github:</strong> <a href="https://github.com/matthewcoupal">https://github.com/matthewcoupal</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <div id="objective">
+        <h2>Objective</h2>
+        <hr>
+        <h3>
+          As an undergraduate in the Computer Science field, my aim is to learn by application and, in doing so, gain knowledge from the professionals I work with.
+
+        </h3>
+        <h3></h3>
+      </div>
+      <div id="goals" class="row">
+        <div class="col-lg-12">
+          <h2>Goals</h2>
+          <hr>
+        </div>
+        <div class="col-sm-4 col-xs-12 goal">
+          <h3>Short-Term</h3>
+          <p>
+            I would like to intern at either:
+            <ul>
+              <li>A statup;</li>
+              <li>A company that emanates innovation and creativity.</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-sm-4 col-xs-12 goal">
+          <h3>Mid-Term</h3>
+          <p>
+            After graduation, my goal is to work:
+            <ul>
+              <li>On a personal venture;</li>
+              <li>At a company that values my goal of impacting people's lives on a large scale.</li>
+            </ul>
+          </p>
+          <p>
+            I aspire to become a full stack web developer, hoping to create applications that service and aid the larger community and have an impact on the people that use them.
+          </p>
+        </div>
+        <div class="col-sm-4 col-xs-12 goal">
+          <h3>Long-Term</h3>
+          <p>
+            My main reason for entering into the Computer Science field--besides the ingenuity and freedom to create--is to have the ability to solve real-world problems through the use of technology.
+          </p>
+        </div>
+      </div>
+      <div class="row" id="education" ng-controller="EduCtrl">
+        <div class="col-lg-12">
+          <h2>Education</h2>
+          <hr>
+        </div>
+        <div class="col-md-6 col-xs-12" ng-repeat="school in schools">
+          <h3>{{school.institution}}
+            <small>{{school.location}}</small>
+          </h3>
+          <h4>{{school.degree}} - {{school.gpa}}</h4>
+          <h4>Attended: {{school.attended}}</h4>
+        </div>
+
+      </div>
+      <div class="row" id="skillList" ng-controller="SkillCtrl as skillCtrl">
+        <div class="col-lg-12">
+          <h2>Skills
+            <small>- See more at <a href="https://www.linkedin.com/in/coupalme">LinkedIn</a>
+              <small>
+          </h2>
+          <hr>
+        </div>
+        <div class="col-lg-4 col-xs-12" ng-repeat="skill in skills">
+          <h3>{{skill.skill}} - {{skill.level}}/10
+          </h3>
+          <h4>
+          <ul class="list-inline">
+            <li ng-repeat="feature in skill.features">{{feature}}</li>
+          </ul>
+        </h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{skill.level}}" aria-valuemin="0" aria-valuemax="10" style="width: {{skill.level * 10}}%;">
+                  <span class="sr-only"></span>
+                </div>
+              </div>
+              <!-- <div class="op" id="op"></div> -->
+        </div>
+        <!-- <h3 class="text-center">See more skills on <a href="https://www.linkedin.com/in/coupalme">LinkedIn</a></h3> -->
+      </div>
+
+    </div>
+    <footer class="text-center">
+      <h1>
+        Interested?
+      </h1>
+      <ul class="list-inline list-unstyled">
+        <li><a href="https://www.linkedin.com/in/coupalme"><i class="fa fa-5x fa-linkedin-square"></i></a></li>
+        <li><a href="https://www.github.com/matthewcoupal"><i class="fa fa-5x fa-github-square"></i></a></li>
+        <li><a href="mailto:coupalme198@potsdam.edu"><i class="fa fa-5x fa-envelope"></i></a></li>
+      </ul>
+      <!-- <button type="button" name="button" class="btn btn-default btn-lg btn-block content"><strong>Contact Me</strong></button> -->
+
+    </footer>
+  </span>
+  <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/progressbar.js/dist/progressbar.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

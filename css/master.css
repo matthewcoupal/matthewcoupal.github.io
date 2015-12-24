@@ -1,0 +1,85 @@
+body {
+  background-color: #E3E3E3;
+}
+
+#profile img {
+  width: 200px;
+  height: auto;
+  align: center;
+}
+
+.pad {
+  margin: 10px;
+}
+
+.profile-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 21px
+}
+
+body .content {
+  width: 80%;
+  margin: auto;
+  /*margin-top: 50px;*/
+}
+
+.vertical-align {
+  min-height: 2em;
+  display: table-cell;
+  margin-top: 20px;
+  vertical-align: middle;
+}
+
+.goal h3 {
+  text-align: center;
+}
+
+#wrapper {
+  font-family: "Roboto";
+}
+
+#wrapper .row {
+  /*margin-bottom: 50px;*/
+  /*margin-top: 50px;*/
+
+}
+
+#wrapper hr {
+  border-color: #FF7049;
+  border-width: 2px;
+}
+
+#wrapper .progress-bar {
+  background-color: #FF7049;
+}
+
+#wrapper footer {
+  min-height: 100vh;
+  background-color: #FF7049;
+  color: #fff;
+  margin-top: 21px;
+}
+
+#wrapper footer h1 {
+  padding-top: 50vh;
+  font-weight: bold;
+  font-size: 10vw;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#wrapper footer a:link { color: #fff; }
+#wrapper footer a:visited { color: #E3E3E3; }
+#wrapper footer a:hover { color: #E3E3E3; }
+#wrapper footer a:active { color: #EEEEEE; }
+
+.op {
+  height: 300px;
+}
+
+.op > svg {
+  height: 100%;
+  display: block;
+}
