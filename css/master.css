@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
 body {
   background-color: #E3E3E3;
 }
@@ -37,7 +39,7 @@ body .content {
 }
 
 #wrapper {
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
 }
 
 #wrapper .row {
