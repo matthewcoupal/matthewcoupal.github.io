@@ -7,15 +7,23 @@ resumeApp.controller('SkillCtrl', function ($scope) {
     {
       'skill': 'Git',
       'features': [
-        'Initializing',
-        'Branching',
+        'Branches',
         'Pull Requests',
-        'Issues'
+        'Issues',
+        'BitBucket'
       ],
       'level': '9'
     },
     {
-      'skill': 'AngularJS',
+      'skill': 'Organization',
+      'features': [
+        'Secretary-ACM',
+        'President-PTK'
+      ],
+      'level': '7.5'
+    },
+    {
+      'skill': 'AngularJS v1',
       'features': [
         'Controllers',
         'Expressions'
@@ -23,10 +31,12 @@ resumeApp.controller('SkillCtrl', function ($scope) {
       'level': '4'
     },
     {
-      'skill': 'Bootstrap',
+      'skill': 'Front End Framworks',
       'features': [
-        'CSS Components',
-        'Grid System'
+        'Bootstrap',
+        'Foundation',
+        'Toast.css',
+        'Skeleton'
       ],
       'level': '6'
     },
@@ -41,16 +51,19 @@ resumeApp.controller('SkillCtrl', function ($scope) {
     {
       'skill': 'Javascript',
       'features': [
-        'Learned from Code School and Code Academy'
+        'Code School',
+        'Code Academy'
       ],
-      'level': '7'
+      'level': '6'
     },
     {
       'skill': 'Public Speaking',
       'features': [
-        'SUNY CIT Conference'
+        'SUNY CIT',
+        'Hack Upstate',
+        'ACM Chapter Meetings'
       ],
-      'level': '6'
+      'level': '7'
     },
     {
       'skill': 'Java',
@@ -58,7 +71,20 @@ resumeApp.controller('SkillCtrl', function ($scope) {
         'Learned At SUNY Potsdam'
       ],
       'level': '8'
+    },
+    {
+      'skill': 'Artificial Intelligence',
+      'features': [
+        'Agents',
+        'Particle Swarm',
+        'Genetic Algorithm',
+        'A*',
+        'Ant Colony',
+        'Simulated Annealing'
+      ],
+      'level': '5'
     }
+
   ];
 });
 
@@ -69,14 +95,14 @@ resumeApp.controller('EduCtrl', function ($scope) {
       'location': 'Potsdam NY',
       'degree': 'B.S. Computer Science/B.A. Mathematics',
       'attended': '2014 - Present',
-      'gpa': '3.86'
+      'gpa': '3.85'
     },
     {
       'institution': "Clinton Community College",
       'location': 'Plattsburgh NY',
       'degree': 'A.A.S. Computer Information Systems',
       'attended': '2012 - 2014',
-      'gpa': '3.947'
+      'gpa': '3.951'
     }
   ];
 });
